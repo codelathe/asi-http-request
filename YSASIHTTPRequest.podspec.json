@@ -1,6 +1,6 @@
 {
   "name": "YSASIHTTPRequest",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "summary": "A version for the ASIHTTPRequest fixed input stream leaks in iOS7.",
   "homepage": "https://github.com/youngshook/asi-http-request",
   "license": "New BSD License",
@@ -10,7 +10,7 @@
   "social_media_url": "http://twitter.com/young_shook", 
   "source": {
     "git": "git@github.com:youngshook/asi-http-request.git",
-    "tag": "1.0.0"
+    "tag": "0.0.1"
   },
   "requires_arc": false,
   "subspecs": [
@@ -27,48 +27,6 @@
           "MobileCoreServices",
           "CFNetwork",
           "CoreGraphics"
-        ]
-      },
-      "osx": {
-        "exclude_files": "**/*ASIAuthenticationDialog*",
-        "frameworks": [
-          "SystemConfiguration",
-          "CoreServices"
-        ]
-      },
-      "libraries": "z.1"
-    },
-    {
-      "name": "ASIWebPageRequest",
-      "source_files": "Classes/ASIWebPageRequest/*.{h,m}",
-      "libraries": "xml2.2",
-      "xcconfig": {
-        "HEADER_SEARCH_PATHS": "\"$(SDKROOT)/usr/include/libxml2\""
-      },
-      "dependencies": {
-        "ASIHTTPRequest/Core": [
-
-        ]
-      }
-    },
-    {
-      "name": "CloudFiles",
-      "source_files": [
-        "Classes/CloudFiles/*.{h,m}",
-        "Classes/S3/ASINSXMLParserCompat.h"
-      ],
-      "dependencies": {
-        "ASIHTTPRequest/Core": [
-
-        ]
-      }
-    },
-    {
-      "name": "S3",
-      "source_files": "Classes/S3/*.{h,m}",
-      "dependencies": {
-        "ASIHTTPRequest/Core": [
-
         ]
       }
     }
