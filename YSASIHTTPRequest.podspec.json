@@ -1,6 +1,6 @@
 {
   "name": "YSASIHTTPRequest",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "summary": "A version for the ASIHTTPRequest fixed input stream leaks in iOS7.",
   "homepage": "https://github.com/youngshook/asi-http-request",
   "license": "New BSD License",
@@ -10,7 +10,7 @@
   "social_media_url": "http://twitter.com/young_shook", 
   "source": {
     "git": "git@github.com:youngshook/asi-http-request.git",
-    "tag": "0.0.1"
+    "tag": "2.0.0"
   },
   "requires_arc": false,
   "subspecs": [
@@ -28,7 +28,8 @@
           "CFNetwork",
           "CoreGraphics"
         ]
-      }
+      },
+      "libraries": "z.1"
     }
   ]
 }
