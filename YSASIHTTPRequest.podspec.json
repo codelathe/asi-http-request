@@ -12,6 +12,9 @@
     "git": "git@github.com:youngshook/asi-http-request.git",
     "tag": "2.0.0"
   },
+  "platforms": {
+    "ios": "5.0"
+  },
   "requires_arc": false,
   "subspecs": [
     {
