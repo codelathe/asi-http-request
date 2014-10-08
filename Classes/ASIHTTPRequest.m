@@ -4060,6 +4060,27 @@ static NSOperationQueue *sharedQueue = nil;
 	[connectionsLock unlock];
 }
 
++ (void)clearPersistentConnections
+{
+    [connectionsLock lock];
+    NSUInteger i;
+    for (i=0; i<[persistentConnectionsPool count]; i++) {
+        NSDictionary *existingConnection = [persistentConnectionsPool objectAtIndex:i];
+        if (![existingConnection objectForKey:@"request"]) {
+#if DEBUG_PERSISTENT_CONNECTIONS
+            ASI_DEBUG_LOG(@"[CONNECTION] Closing connection #%i manualy",[[existingConnection objectForKey:@"id"] intValue]);
+#endif
+            NSInputStream *stream = [existingConnection objectForKey:@"stream"];
+            if (stream) {
+                [stream close];
+            }
+            [persistentConnectionsPool removeObject:existingConnection];
+            i--;
+        }
+    }
+    [connectionsLock unlock];
+}
+
 #pragma mark NSCopying
 - (id)copyWithZone:(NSZone *)zone
 {
