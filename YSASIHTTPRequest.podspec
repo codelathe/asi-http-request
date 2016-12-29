@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "YoungShook" => "shook.young@gmail.com" }
   s.platform     = :ios, "6.0"
-  s.source       = { :git => "https://github.com/youngshook/asi-http-request.git"}
+  s.source       = { :git => "https://github.com/youngshook/asi-http-request.git", :tag => spec.version }
   s.source_files  = "Classes", "Classes/*.{h,m}"
   s.library   = "z.1"
   s.frameworks = "CFNetwork","SystemConfiguration","MobileCoreServices","CoreGraphics"
