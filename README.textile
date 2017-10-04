@@ -1,3 +1,22 @@
+
+This project is provided as a temporary workaround until it's removed.
+
+Release process:
+
+1) Update podspec version
+
+2) Lint podspec with:
+
+pod lib lint --use-libraries --allow-warnings
+
+2) Upload to repo with:
+
+$ git add -A && git commit -m "Release 0.0.1."
+$ git tag '0.0.1'
+$ git push --tags
+
+---
+
 ASIHTTPRequest is an easy to use wrapper around the CFNetwork API that makes some of the more tedious aspects of communicating with web servers easier. It is written in Objective-C and works in both Mac OS X and iPhone applications.
 
 It is suitable performing basic HTTP requests and interacting with REST-based services (GET / POST / PUT / DELETE). The included ASIFormDataRequest subclass makes it easy to submit POST data and files using multipart/form-data.
